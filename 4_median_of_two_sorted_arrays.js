@@ -8,8 +8,6 @@ var findMedianSortedArrays = function(nums1, nums2) {
     const n = nums2.length;
     const l = m + n;
 
-    // nums1 [1, 2]
-    // nums2 [3, 4]
     const findKthElement = (k) => {
         let index1 = 0;
         let index2 = 0;

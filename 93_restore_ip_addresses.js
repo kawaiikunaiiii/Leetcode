@@ -28,3 +28,8 @@ var restoreIpAddresses = function(s) {
     dfs([], 0);
     return res;
 };
+
+/**
+ * time complexity O(3 ** l * n)
+ * space complexity O(l) l 为 ip 地址段数，此处为 4
+ */

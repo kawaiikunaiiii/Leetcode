@@ -25,5 +25,3 @@ var lengthOfLongestSubstring = function(s) {
  * time complexity O(n)
  * space complexity O(n)
  */
-
-console.log(true === 1);

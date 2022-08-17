@@ -10,12 +10,12 @@ var generateParenthesis = function(n) {
             return;
         }
         if (open < close) return; // ensure correctness
-        if (open === n && close < n) {
-            dfs(cur + ")", open, close + 1);
-            return;
+        if (open < n) {
+            dfs(cur + "(", open + 1, close);
         }
-        dfs(cur + "(", open + 1, close);
-        dfs(cur + ")", open, close + 1);
+        if (close < n) {
+            dfs(cur + ")", open, close + 1);
+        }
     }
     dfs("", 0, 0);
     return ans;

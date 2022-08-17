@@ -22,10 +22,10 @@ var findMedianSortedArrays = function(nums1, nums2) {
                 return Math.min(nums1[index1], nums2[index2]);
             }
             const half = Math.floor(k / 2);
-            const newIndex1 = Math.min(m, index1 + half) - 1;
+            const newIndex1 = Math.min(m, index1 + half) - 1; // important!
             const newIndex2 = Math.min(n, index2 + half) - 1;
             if (nums1[newIndex1] >= nums2[newIndex2]) {
-                k = k - (newIndex2 - index2 + 1);
+                k = k - (newIndex2 - index2 + 1); // be careful here
                 index2 = newIndex2 + 1;
             } else {
                 k = k - (newIndex1 - index1 + 1);
@@ -45,6 +45,6 @@ var findMedianSortedArrays = function(nums1, nums2) {
 };
 
 /**
- * time complexity O(mn)
- * space complexity O(mn)
+ * time complexity O(log(min(m, n)))
+ * space complexity O(1)
  */
